@@ -29,4 +29,4 @@ Use the arrow key to control the player to move around.
 
 ## Outro
 
-You can fork it to play the game.
+You can fork it to play the game. you can also play it [here](https://tolufolorunso.github.io/arcadeGame/)
