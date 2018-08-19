@@ -8,22 +8,15 @@ body {
     text-align: center;
     background: tomato;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.header,
-canvas,
-.footer {
-    flex: 1;
-}
 
 .header {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
-    padding-top: 10px;
-    order: 1;
+    position: relative;
+    top: -7%;
+    text-align: center;
 }
 
 img {
@@ -37,18 +30,16 @@ img {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-content: center
+    align-content: center;
 }
 
 .heart ul {
     list-style: none;
-
     display: flex;
-
 }
 
 .heart ul li {
-    width: 40px
+    width: 35px
 }
 
 .time,
@@ -66,19 +57,18 @@ img {
 canvas {
     height: 85vh;
     width: 100vh;
-    margin-top: -30px;
-    align-self: center;
-    order: 2;
+    margin-top: -50px;
 }
 
 
 
 .footer {
-    order: 3;
-    /*    margin-top: -30px;*/
+    position: fixed;
+    width: 100%;
+    bottom: 0;
     background: black;
     color: #fff;
-    padding-top: 10px;
+    padding: 20px;
     text-transform: uppercase;
 }
 
@@ -87,4 +77,54 @@ canvas {
     color: tomato;
     font-size: 1.3em;
     display: inline-block;
+}
+
+.hit--message {
+    color: tomato;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.hit {
+    visibility: hidden;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+
+.hit--msg {
+    visibility: visible;
+    animation: animate2 0.7s ease-in-out infinite;
+}
+
+
+.animate {
+    font-size: 1.4em;
+    animation: animate 1s ease infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
