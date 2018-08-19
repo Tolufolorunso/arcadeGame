@@ -13,7 +13,7 @@ body {
 
 
 .header {
-    max-width: 500px;
+    width: 60%;
     margin: 0 auto;
     position: relative;
     top: -7%;
