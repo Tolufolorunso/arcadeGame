@@ -198,9 +198,8 @@ function curTime() {
             hour++;
             min = 0;
         }
-        if (hour === 12) {
-            hour++;
-            hour = 1;
+        if (hour >= 13) {
+            hour -= 12;
         }
         sec = sec < 10 ? '0' + sec : sec;
         time.textContent = `${hour}h : ${min}mins : ${sec}s`;
