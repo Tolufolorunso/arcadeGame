@@ -120,7 +120,7 @@ const player = new Player(300, 540);
 
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [
-    new Enemy(-101, 70, 400),
+    new Enemy(-101, 55, 400),
     new Enemy(-100, 140, 280),
     new Enemy(-101, 220, 380),
     new Enemy(-101, 300, 150),
@@ -130,7 +130,7 @@ const allEnemies = [
 //bugs to push into allEnemies array after each level
 const otherEnemiesArr = [
     new Enemy(-101, 470, 400),
-    new Enemy(-101, 70, 500),
+    new Enemy(-101, 55, 500),
     new Enemy(-100, 140, 600),
     new Enemy(-101, 220, 780),
     new Enemy(-101, 380, 180),
