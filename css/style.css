@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -9,14 +10,15 @@ body {
     background: tomato;
     height: 100vh;
     width: 100%;
+    font-size: 1em;
 }
 
 
 .header {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
-    top: -7%;
+    top: -10%;
     text-align: center;
 }
 
@@ -29,13 +31,20 @@ img {
 
 .heart {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-line-pack: center;
     align-content: center;
 }
 
 .heart ul {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -45,19 +54,24 @@ img {
 
 .time,
 .level {
+    -ms-flex-item-align: center;
     align-self: center;
-    font-size: 1.3em
+    font-size: 1em;
+}
+
+.time {
+    width: 60%;
 }
 
 .level {
-    padding-right: 40px;
+    width: 30%
 }
 
 
 
 canvas {
-    height: 85vh;
-    width: 100vh;
+    height: 70%;
+    width: 80%;
     margin-top: -50px;
 }
 
@@ -85,6 +99,7 @@ canvas {
     position: relative;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%)
 }
 
@@ -97,13 +112,25 @@ canvas {
 
 .hit--msg {
     visibility: visible;
+    -webkit-animation: animate2 0.7s ease-in-out infinite;
     animation: animate2 0.7s ease-in-out infinite;
 }
 
 
 .animate {
     font-size: 1.4em;
+    -webkit-animation: animate 1s ease infinite;
     animation: animate 1s ease infinite;
+}
+
+
+@-webkit-keyframes animate {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -113,6 +140,20 @@ canvas {
     }
     100% {
         opacity: 0;
+    }
+}
+
+@-webkit-keyframes animate2 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.3;
     }
 }
 
@@ -127,5 +168,52 @@ canvas {
 
     100% {
         opacity: 0.3;
+    }
+}
+
+@media screen and (width:320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px)/680));
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.2em;
+    }
+
+    .footer {
+        font-size: 17px;
+    }
+    canvas {
+        height: 70%;
+        width: 90%;
+    }
+    .time {
+        width: 60%;
+        font-size: 0.8em
+    }
+    .heart {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .level {
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-size: 0.8em;
+    }
+    .heart ul {
+        padding-left: 25%
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    html {
+        font-size: 22px;
     }
 }
