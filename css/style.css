@@ -16,9 +16,10 @@ body {
 
 .header {
     width: 70%;
+/*    height: 15%;*/
     margin: 0 auto;
     position: relative;
-    top: -10%;
+    top: -13%;
     text-align: center;
 }
 
@@ -70,9 +71,9 @@ img {
 
 
 canvas {
-    height: 70%;
+    height: 60%;
     width: 80%;
-    margin-top: -50px;
+    margin-top: -70px;
 }
 
 
@@ -179,13 +180,14 @@ canvas {
 @media screen and (max-width: 600px) {
     body {
         font-size: 1.2em;
+        height: 90vh;
     }
 
     .footer {
         font-size: 17px;
     }
     canvas {
-        height: 70%;
+        height: 60%;
         width: 90%;
     }
     .time {
@@ -217,3 +219,4 @@ canvas {
         font-size: 22px;
     }
 }
+
